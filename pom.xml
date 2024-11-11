@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>Cucumber</groupId>
+  <artifactId>BDD</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <name>BDD</name>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.target>20</maven.compiler.target>
+    <maven.compiler.source>20</maven.compiler.source>
+        <aspectj.version>1.9.19</aspectj.version>
+    <allure.version>2.22.0</allure.version>              </properties>
+
+  <dependencies>
+            <dependency>
+      <groupId>io.qameta.allure</groupId>
+      <artifactId>allure-testng</artifactId>
+      <version>${allure.version}</version>
+      <scope>test</scope>
+    </dependency>    <dependency>
+      <groupId>com.codeborne</groupId>
+      <artifactId> selenide-testng </artifactId>
+      <version>6.13.1</version>
+      <scope>test</scope>
+    </dependency>    <dependency>
+      <groupId>io.qameta.allure</groupId>
+      <artifactId>allure-selenide</artifactId>
+      <version>${allure.version}</version>
+      <scope>test</scope>
+    </dependency>                <dependency>
+      <groupId>io.github.bonigarcia</groupId>
+      <artifactId>webdrivermanager</artifactId>
+      <version>5.4.0</version>
+      <scope>test</scope>
+    </dependency>    <dependency>
+      <groupId>net.serenity-bdd</groupId>
+      <artifactId>serenity-core</artifactId>
+      <version>3.7.0</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>net.serenity-bdd</groupId>
+      <artifactId>serenity-junit</artifactId>
+      <version>3.7.0</version>
+      <scope>test</scope>
+    </dependency>                            <dependency>
+      <groupId>org.hamcrest</groupId>
+      <artifactId>hamcrest</artifactId>
+      <version>2.2</version>
+      <scope>test</scope>
+    </dependency>    <dependency>
+      <groupId>org.assertj</groupId>
+      <artifactId>assertj-core</artifactId>
+      <version>3.24.2</version>
+      <scope>test</scope>
+    </dependency>    <dependency>
+      <groupId>com.google.truth</groupId>
+      <artifactId>truth</artifactId>
+      <version>1.1.3</version>
+      <scope>test</scope>
+    </dependency>            <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>7.10.2</version>
+      <scope>test</scope>
+    </dependency>    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <version>2.0.7</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-java</artifactId>
+      <version>7.20.1</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apiguardian/apiguardian-api -->
+    <dependency>
+      <groupId>org.apiguardian</groupId>
+      <artifactId>apiguardian-api</artifactId>
+      <version>1.1.2</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.cucumber/ci-environment -->
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>ci-environment</artifactId>
+      <version>10.0.1</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-expressions -->
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-expressions</artifactId>
+      <version>17.1.0</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.cucumber/gherkin -->
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>gherkin</artifactId>
+      <version>29.0.0</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-gherkin-messages -->
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-gherkin-messages</artifactId>
+      <version>7.15.0</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-core -->
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-core</artifactId>
+      <version>7.20.1</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-plugin -->
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-plugin</artifactId>
+      <version>7.20.1</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.cucumber/datatable -->
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>datatable</artifactId>
+      <version>7.20.1</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.cucumber/docstring -->
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>docstring</artifactId>
+      <version>7.20.1</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.cucumber/gherkin -->
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>gherkin</artifactId>
+      <version>29.0.0</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.cucumber/html-formatter -->
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>html-formatter</artifactId>
+      <version>21.7.0</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.cucumber/junit-xml-formatter -->
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>junit-xml-formatter</artifactId>
+      <version>0.5.0</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.cucumber/messages -->
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>messages</artifactId>
+      <version>25.0.1</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.cucumber/tag-expressions -->
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>tag-expressions</artifactId>
+      <version>6.1.0</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>2.0.16</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+    <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>7.10.2</version>
+      <scope>test</scope>
+    </dependency>
+      <dependency>
+          <groupId>io.cucumber</groupId>
+          <artifactId>cucumber-testng</artifactId>
+          <version>7.15.0</version>
+          <scope>test</scope>
+      </dependency>
+    <dependency>
+      <groupId>io.github.bonigarcia</groupId>
+      <artifactId>webdrivermanager</artifactId>
+      <version>5.4.0</version>
+    </dependency>
+
+
+  </dependencies>
+  <build>
+        <plugins>
+                  <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.22.2</version>
+        <configuration>
+          <testFailureIgnore>true</testFailureIgnore>
+          <argLine>
+            -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+          </argLine>
+          <systemProperties>
+            <property>
+              <name>allure.results.directory</name>
+              <value>${project.build.directory}/allure-results</value>
+            </property>
+          </systemProperties>        </configuration>
+        <dependencies>
+          <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>${aspectj.version}</version>
+          </dependency>
+        </dependencies>      </plugin>
+      <plugin>
+        <groupId>io.qameta.allure</groupId>
+        <artifactId>allure-maven</artifactId>
+        <version>2.12.0</version>
+      </plugin>      <plugin>
+        <groupId>net.serenity-bdd.maven.plugins</groupId>
+        <artifactId>serenity-maven-plugin</artifactId>
+        <version>3.7.0</version>
+        <dependencies>
+          <dependency>
+            <groupId>net.serenity-bdd</groupId>
+            <artifactId>serenity-core</artifactId>
+            <version>3.7.0</version>
+          </dependency>
+        </dependencies>
+        <executions>
+          <execution>
+            <id>serenity-reports</id>
+            <phase>post-integration-test</phase>
+            <goals>
+              <goal>aggregate</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>    </plugins>
+  </build>
+</project>
